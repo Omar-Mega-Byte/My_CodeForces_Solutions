@@ -11,30 +11,28 @@ def P1():
     for word in text:
         if len(word) > 10:
             print(word[0] + str(len(word) - 2) + word[-1])
-        elif len(word) <= num or (len(word) > num and len(word) <= 10):
+        elif len(word) <= num or (num < len(word) <= 10):
             print(word)
 
 
 #######################################################################
 
 # B. A Team
-num = int(input())
-numbers = []  # Initialize an empty list to hold the sublist
+def P2():
+    num = int(input())
+    numbers = []
 
-# Read numbers into the list
-for _ in range(num):
-    row = []  # Create a new list for each row
-    for i in range(3):
-        row.append(int(input()))
-    numbers.append(row)  # Add the row to the numbers list
+    # Read numbers into the list
+    for _ in range(num):
+        row = list(map(int, input().split()))
+        numbers.append(row)
 
-count = 0
+    count = 0
 
-for number in range(num):
-    for i in range(2):
-        if numbers[number][i] == numbers[number][i + 1] or numbers[number][i] == numbers[number][i + 2] or \
-                numbers[number][i] == numbers[number][i + 2] == numbers[number][i + 1]:
+    for number in numbers:
+        if sum(number) >= 2:
             count += 1
-    return count
 
-# print(numbers)
+    print(count)
+
+P2()
