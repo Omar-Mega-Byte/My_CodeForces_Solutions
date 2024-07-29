@@ -1,3 +1,5 @@
+#######################################################################
+
 # A. Way Too Long Words
 def P1():
     num = int(input())
@@ -72,5 +74,55 @@ def P4():
 
     print(count)
 
+
+#######################################################################
+
+# E. Domino piling
+def P5():
+    data = list(map(int, input().split()))  # Read n and k
+    n = data[0]
+    k = data[1]
+    mul = n * k
+    print(mul // 2)
+
+
+#######################################################################
+
+# F. Beautiful Matrix
+
+def P6():
+    numbers = []
+    count = 0
+    target_col = 2
+    target_row = 2
+    # Read numbers into the list
+    for i in range(5):
+        row = list(map(int, input().split()))
+        numbers.append(row)
+        if 1 in row:
+            one_row = i
+            one_col = row.index(1)
+
+    count = abs(target_col - one_col) + abs(target_row - one_row)
+    print(count)
+
+
+#######################################################################
+
+# G. Petya and Strings
+
+def P7():
+    text1 = input().strip()
+    text2 = input().strip()
+
+    text1 = text1.lower()
+    text2 = text2.lower()
+
+    if text1 < text2:
+        print(-1)
+    elif text1 > text2:
+        print(1)
+    else:
+        print(0)
 
 #######################################################################
