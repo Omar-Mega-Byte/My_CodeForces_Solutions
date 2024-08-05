@@ -1,4 +1,3 @@
-
 text1 = input().strip()
 text2 = input().strip()
 
