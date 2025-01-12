@@ -6,7 +6,8 @@ Welcome to my collection of **CodeForces** problem solutions! 🧠✨ This repos
 ## 🛠️ Tools & Technologies
 
 - **Python 🐍**
-- **C** 
+- **C 🔧**
+- **Java ☕**
 
 
 ## 🔗 Explore
